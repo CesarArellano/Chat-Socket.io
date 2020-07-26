@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chat con Socket.io</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.3.2/sweetalert2.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
+  <link rel="stylesheet" href="main.css">
+  <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.3.2/sweetalert2.js" charset="utf-8"></script>
+</head>
+<body>
+  <br>
+  <center><img class="animate__animated animate__fadeIn" src="iconoChat.png" width="125px" height="125px"  alt="Foto chat"></center>
+  <h2 class="center-align white-text">Chat Socket.io</h2>
+  <div class="container">
+    <div class="row">
+      <div class="col s12">
+        <div class="card hoverable animate__animated animate__fadeInLeft animate__faster">
+          <div class="card-content">
+            <p class="center-align flow-text">Messages box</p>
+            <div id="chat-window">
+              <div id="output"></div>
+              <div id="actions"></div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <i class="material-icons prefix">account_circle</i>
+                <input type="text" id="username" placeholder="Username">
+              </div>
+              <div class="input-field col xl11 l10 m10 s9">
+                <i class="material-icons prefix">message</i>
+                <input type="text" id="message" placeholder="Message">
+              </div>
+              <div class="input-field col xl1 l2 m2 s3">
+                <center>
+                  <button class="btn-floating btn-large waves-effect waves-light" id="send" disabled><i class="material-icons">send</i></button>
+                </center>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="socket.io/socket.io.js" charset="utf-8"></script>
+  <script src="chat.js"></script>
+</body>
+</html>
